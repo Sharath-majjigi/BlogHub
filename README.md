@@ -8,6 +8,7 @@ A complete Blog App built with spring boot and spring security.
 4) Swagger for Api Documentation<br />
 5) Implemented Searching and sorting <br />
 6) Aws Ec2 and S3 services for code Deployment.<br />
+7) Aws RDS for postgresql Database.<br />
 
 //In-Progress<br />
 CI/CD pipeline using Jenkins<br />
@@ -20,5 +21,14 @@ CI/CD pipeline using Jenkins<br />
 5) User can write/delete a comment to his/any other post.<br />
 6) Posts belong to a particular category and user can access posts with category.<br />
 
+**All the Apis with Swagger Documentation available here:**
+http://44.203.172.83:8081/swagger-ui/index.html
+
+
+https://user-images.githubusercontent.com/67635598/177391025-9b91911d-9b5f-4343-a83a-5ef5a44406f3.mp4
+
+Frontend Developers can easily use this to make your projects:)
+
+And any contribution is welcomed ! Please raise an issue and i'll will be approving it !
 
 
