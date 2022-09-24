@@ -1,15 +1,16 @@
 **BlogHub** <br />
-A complete Blog App built with spring boot and spring security.
-
+A complete Blog App built with spring boot and spring security.</br>
+</br>
 **Tech used** :<br />
-1) Spring Boot<br />
-2) Spring Security<br />
-3) Maven as Build tool<br />
-4) Swagger for Api Documentation<br />
-5) Implemented Searching and sorting <br />
-6) Aws Ec2 and S3 services for code Deployment.<br />
-7) Aws RDS for postgresql Database.<br />
-
+</br>
+![SpringBoot](https://img.shields.io/badge/springboot-%236DB33F.svg?style=for-the-badge&logo=springboot&logoColor=white)
+<br />
+![SpringSecurity](https://img.shields.io/badge/springsecurity-%236DB33F.svg?style=for-the-badge&logo=springsecurity&logoColor=white)</br>
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)</br>
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)</br>
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)</br>
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
+</br>
 //In-Progress<br />
 CI/CD pipeline using Jenkins<br />
 
