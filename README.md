@@ -11,8 +11,7 @@ A complete Blog App built with spring boot and spring security.</br>
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)</br>
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
 </br>
-//In-Progress<br />
-CI/CD pipeline using Jenkins<br />
+
 
 **Features of BlogHub:**<br />
 1) User can Register and Login.<br />
