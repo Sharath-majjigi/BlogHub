@@ -1,25 +1,115 @@
-**BlogHub** <br />
 A complete Blog App built with spring boot and spring security.</br>
-</br>
-**Tech used** :<br />
-</br>
-![SpringBoot](https://img.shields.io/badge/springboot-%236DB33F.svg?style=for-the-badge&logo=springboot&logoColor=white)
-<br />
-![SpringSecurity](https://img.shields.io/badge/springsecurity-%236DB33F.svg?style=for-the-badge&logo=springsecurity&logoColor=white)</br>
-![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)</br>
-![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)</br>
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)</br>
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
-</br>
 
 
-**Features of BlogHub:**<br />
-1) User can Register and Login.<br />
-2) Secured Apis by JWT token which an user gets once he logged in and need to pass in header while accessing Apis.<br />
-3) Role Based Access [ADMIN,USER].<br />
-4) User can post blogs which include text and image.<br />
-5) User can write/delete a comment to his/any other post.<br />
-6) Posts belong to a particular category and user can access posts with category.<br />
+# Design Document of BlogHub
+
+## Index:
+1. [Requirements](#1-requirements)
+2. [Data Model | Database Design](#2-data-model--database-design)
+3. [APIs](#3-apis)
+4. [Technology Used](#4-technology-used)
+
+## 1. Requirements:
+
+- **User Registration and Login:**
+  - New users can register, and existing users can log in to BlogHub.
+
+- **Blog/Article Creation:**
+  - Users can articulate their knowledge/thoughts by writing blogs/articles visible to all BlogHub users.
+
+- **Post Operations:**
+  - Create, update, delete, and get a list of posts.
+
+- **Comment Operations:**
+  - Add, update, and delete comments on a user's posts and other users' posts.
+
+- **Categorization:**
+  - Each post should belong to at least one category. Selecting a category displays a list of posts in that category.
+
+## 2. Data Model | Database Design:
+
+- **User Model**
+- **Post Model**
+- **Comment Model**
+- **Category Model**
+- **RoleType Model**
+</br>
+
+![DB design](https://i.ibb.co/L8KsHt5/bloghub2.png)
+
+*Description:*
+- One user can write and publish many posts → User has a OneToMany relation with Post.
+- A post can have many comments → Post has a OneToMany relation with Comment.
+- A post at most belongs to one Category → Post has a ManyToOne relation with Category.
+- One user can have multiple roles → User has a ManyToMany relation with RoleType.
+
+## 3. APIs:
+
+### User Operations:
+
+| HTTP Method | API Endpoint       | Description                       |
+|-------------|--------------------|-----------------------------------|
+| POST        | /register          | Register a new user.              |
+| POST        | /login             | Log in an existing user.          |
+| POST        | /createUser        | Create a new user profile.        |
+| PUT         | /updateUser        | Update user information.          |
+| GET         | /getUserDetails    | Retrieve detailed user information|
+| DELETE      | /deleteUser        | Delete a user account.            |
+| GET         | /getUserById       | Retrieve user information by ID.  |
+| GET         | /getAllUsers       | Retrieve a list of all users.     |
+
+### Post Operations:
+
+| HTTP Method | API Endpoint             | Description                       |
+|-------------|--------------------------|-----------------------------------|
+| POST        | /createPost              | Create a new blog post.           |
+| GET         | /getAllPostOfUserById    | Retrieve all posts of a user.     |
+| GET         | /getAllPostOfCategory    | Retrieve all posts of a category. |
+| GET         | /getAllPost              | Retrieve a list of all blog posts.|
+| PUT         | /updatePost              | Update an existing blog post.     |
+| DELETE      | /deletePost              | Delete a blog post.               |
+
+### Comment Operations:
+
+| HTTP Method | API Endpoint          | Description                         |
+|-------------|-----------------------|-------------------------------------|
+| POST        | /createComment        | Add a new comment to a blog post.   |
+| DELETE      | /deleteComment        | Delete a comment.                   |
+
+### Category Operations:
+
+| HTTP Method | API Endpoint          | Description                         |
+|-------------|-----------------------|-------------------------------------|
+| POST        | /createCategory       | Create a new category.              |
+| GET         | /getCategoryById      | Retrieve category information by ID.|
+| GET         | /getAllCategories     | Retrieve a list of all categories.  |
+| GET         | /getAllPostOfCategoryById| Retrieve all posts of a category.|
+| PUT         | /updateCategory       | Update category information.        |
+| DELETE      | /deleteCategory       | Delete a category.                  |
+
+*All APIs are RESTful, and unit tests should be written to ensure application stability as it grows.*
+
+## 4. Technology Used:
+
+- **Java JDK 8**
+- **Spring Boot**
+- **IntelliJ IDEA**
+- **Apache Tomcat (Embedded Server)**
+- **Spring Core, Spring Security, Spring Data JPA (Hibernate)**
+- **PostgreSQL Database**
+- **Git VCS**
+- **Postman Rest Client**
+- **Swagger 2.0 for API Documentation**
+- **Amazon Web Services (AWS) for Deployment**
+  - EC2, S3, RDS
+- **JWT for Authentication**
+- **Additional:**
+  - Create a Docker image, push the image to DockerHub, and deploy it into a Kubernetes Cluster.
+</br>
+
+*Followed Spring MVC Architecture.*
+
+![Spring Mvc](https://i.ibb.co/zXzkMFr/bloghub1.png)
 
 <!-- **All the Apis with Swagger Documentation available here:**
 http://44.203.172.83:8081/swagger-ui/index.html -->
